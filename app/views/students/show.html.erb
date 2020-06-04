@@ -5,4 +5,8 @@
     This student is currently inactive.
 <%end%>
 <div>----------</div>
-<div><a href= '<%="/student/#{@student.id}/activate"%>'>Change status here</a></div>
+
+
+<% @students.each do |student| %>
+  <div><%= link_to student.active, student_path(student) %></div>
+<% end %>
