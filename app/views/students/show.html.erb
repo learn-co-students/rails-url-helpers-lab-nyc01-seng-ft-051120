@@ -1,1 +1,21 @@
-<h1><%= @student.to_s %></h1>
+<!doctype html>
+<html>
+    <head>
+        <title>Student Show Page</title>
+    </head>
+    <body>
+        <h1> class="text_center">First Name: <%= @student.first_name %></h1>
+        <h1> class="text_center">Last Name: <%= @student.last_name %></h1>
+
+        <div><% if @student.active %>
+            <h2>class="text-center">This student is currently active.</h2>
+            <% else %>
+            <h2>class="text-center">This student is currently inactive.</h2>
+            <% end %>
+        </div>
+
+
+
+    </body>
+</html>
+
